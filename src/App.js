@@ -3,6 +3,7 @@ import FormComponent from "./components/FormComponent";
 import TimerWithRef from "./components/TimerWithRef";
 import TimerWithoutRef from "./components/TimerWithoutRef";
 import UsersDynamicSearch from "./components/UsersDynamicSearch";
+import DynamicTextInput from "./components/DynamicTextInput";
 
 const App = () => {
   const formConfig = [
@@ -53,7 +54,8 @@ const App = () => {
       </div>
       <TimerWithoutRef />
       <TimerWithRef /> */}
-      <UsersDynamicSearch />
+      {/* <UsersDynamicSearch /> */}
+      <DynamicTextInput />
     </div>
   );
 };
