@@ -1,0 +1,16 @@
+.traffic-lights-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  gap: 20px;
+  width: 200px;
+}
+
+.traffic-light {
+  height: 100px;
+  width: 100px;
+  background: gray;
+  border-radius: 50%;
+}

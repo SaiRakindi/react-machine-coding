@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FormComponent from "./components/FormComponent";
+import TimerWithRef from "./components/TimerWithRef";
+import TimerWithoutRef from "./components/TimerWithoutRef";
 
-function App() {
+const App = () => {
+  const formConfig = [
+    {
+      elementType: "text",
+      name: "username",
+      label: "Username",
+    },
+    {
+      elementType: "radio",
+      name: "gender",
+      label: "Gender",
+      options: [
+        { value: "male", label: "Male" },
+        { value: "female", label: "Female" },
+      ],
+    },
+    {
+      elementType: "checkbox",
+      name: "hobbies",
+      label: "Hobbies",
+      options: [
+        { value: "reading", label: "Reading" },
+        { value: "traveling", label: "Traveling" },
+        { value: "coding", label: "Coding" },
+      ],
+    },
+    {
+      elementType: "select",
+      name: "country",
+      label: "Country",
+      options: [
+        { value: "india", label: "India" },
+        { value: "us", label: "United States" },
+        { value: "uk", label: "United Kingdom" },
+      ],
+    },
+  ];
+
+  const handleSubmit = (formData) => {
+    console.log("Form Data:", formData);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <div style={{ display: "none" }}>
+        <FormComponent formConfig={formConfig} onSubmit={handleSubmit} />
+      </div>
+      <TimerWithoutRef />
+      <TimerWithRef /> */}
     </div>
   );
-}
+};
 
 export default App;
