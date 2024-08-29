@@ -2,6 +2,7 @@ import React from "react";
 import FormComponent from "./components/FormComponent";
 import TimerWithRef from "./components/TimerWithRef";
 import TimerWithoutRef from "./components/TimerWithoutRef";
+import UsersDynamicSearch from "./components/UsersDynamicSearch";
 
 const App = () => {
   const formConfig = [
@@ -52,6 +53,7 @@ const App = () => {
       </div>
       <TimerWithoutRef />
       <TimerWithRef /> */}
+      <UsersDynamicSearch />
     </div>
   );
 };
