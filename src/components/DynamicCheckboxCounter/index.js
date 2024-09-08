@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import "./index.css";
 
 const DynamicCheckboxCounter = () => {
   const [checkboxes, setCheckboxes] = useState([
@@ -48,32 +49,40 @@ const DynamicCheckboxCounter = () => {
   };
 
   return (
-    <div>
-      {checkboxes.map((checkboxItem) => (
-        <div>
-          <label>
-            <input
-              key={checkboxItem.id}
-              type="checkbox"
-              value={checkboxItem.id}
-              checked={checkboxItem.checked}
-              onChange={() => handleOnChangeCheck(checkboxItem.id)}
-            />
-            {checkboxItem.label}{" "}
-          </label>
+    <div className="checkbox-section">
+      <div className="checkbox-button-section">
+        <div className="checkboxes">
+          {checkboxes.map((checkboxItem) => (
+            <div>
+              <label>
+                <input
+                  key={checkboxItem.id}
+                  type="checkbox"
+                  value={checkboxItem.id}
+                  checked={checkboxItem.checked}
+                  onChange={() => handleOnChangeCheck(checkboxItem.id)}
+                />
+                {checkboxItem.label}{" "}
+              </label>
+            </div>
+          ))}
         </div>
-      ))}
 
-      <button onClick={handleSelectAll} disabled={selectAllActive}>
-        {!selectAllActive ? `Select All` : `All selected`}
-      </button>
+        <button
+          onClick={handleSelectAll}
+          disabled={selectAllActive}
+          className="select-all-button"
+        >
+          {!selectAllActive ? `Select All` : `All selected`}
+        </button>
 
-      <p>Selected : {renderCheckBoxesCount(true)}</p>
+        <p>Selected : {renderCheckBoxesCount(true)}</p>
 
-      <div>
-        {renderSelectedCheckboxes().map((checkbox) => (
-          <p key={checkbox.label}>{checkbox.label}</p>
-        ))}
+        <div>
+          {renderSelectedCheckboxes().map((checkbox) => (
+            <p key={checkbox.label}>{checkbox.label}</p>
+          ))}
+        </div>
       </div>
     </div>
   );
