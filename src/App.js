@@ -7,6 +7,7 @@ import DynamicTextInput from "./components/DynamicTextInput";
 import FormAutoSave from "./components/FormAutoSave";
 import DebounceExample from "./components/DebounceExample";
 import CountriesDropdown from "./components/CountriesDropdown";
+import DynamicCheckboxCounter from "./components/DynamicCheckboxCounter";
 
 const App = () => {
   const formConfig = [
@@ -52,18 +53,20 @@ const App = () => {
 
   return (
     <div>
-      {/* <div style={{ display: "none" }}>
+      <div style={{ display: "none" }}>
         <FormComponent formConfig={formConfig} onSubmit={handleSubmit} />
-      </div>
-      <TimerWithoutRef />
-      <TimerWithRef /> */}
-      {/* <UsersDynamicSearch /> */}
-      {/* <DynamicTextInput /> */}
-      {/* <FormAutoSave /> */}
+        <TimerWithoutRef />
+        <TimerWithRef />
+        <UsersDynamicSearch />
+        <DynamicTextInput />
+        <FormAutoSave />
 
-      {/* <DebounceExample /> */}
-      {/* <FormComponent formConfig={formConfig} onSubmit={handleSubmit} /> */}
-      <CountriesDropdown />
+        <DebounceExample />
+        <FormComponent formConfig={formConfig} onSubmit={handleSubmit} />
+        <CountriesDropdown />
+      </div>
+
+      <DynamicCheckboxCounter />
     </div>
   );
 };
